@@ -1,0 +1,69 @@
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background-image: url("https://images.unsplash.com/photo-1633538475696-a93e30810e09?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80");
+}
+
+button {
+    border-radius: 15px;
+    border: 3px solid black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.request-type {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1633085650319-b9efc57dcf07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+}
+
+#getHoroscope {
+   padding: 5px;
+}
+
+#horoscope-input {
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+ol {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button:hover {
+    color: red;
+    cursor: pointer;
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 0 10px black;
+}
+
+button:active {
+    transform: scale (1, 1);
+    color: blue;
+}
+
+h4 {
+    font-size: 24px;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.todo-list {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+
+}

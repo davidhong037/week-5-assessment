@@ -8,6 +8,8 @@ app.use(cors());
 
 app.use(express.json()); // When we want to be able to accept JSON.
 
+const ctrl = require('./controller')
+
 app.get("/api/compliment", (req, res) => {
   const compliments = ["Gee, you're a smart cookie!",
 					 "Cool shirt!",
@@ -33,7 +35,25 @@ app.get('/api/fortune', (req, res) => {
   let randomIndexTwo = Math.floor(Math.random() * fortunes.length)
   let randomFortune = fortunes[randomIndexTwo]
 
-  res.status(200). send(randomFortune)
+  res.status(200).send(randomFortune)
+})
+
+app.get('/api/inspirational', (req, res) => {
+  const inspirational = ['Nothing is impossible. The word itself says ‘I’m possible!',
+          'Life has got all those twists and turns. You’ve got to hold on tight and off you go.',
+          'Keep your face always toward the sunshine, and shadows will fall behind you.',
+          'Success is not final, failure is not fatal: it is the courage to continue that counts.',
+          'You define your own life. Don’t let other people write your script.',
+          'Believe you can and you’re halfway there.',
+          'All you need is the plan, the road map, and the courage to press on to your destination.',
+          'Life is like riding a bicycle. To keep your balance, you must keep moving.',
+          'You are never too old to set another goal or to dream a new dream.'
+]
+
+  let randomIndexThree = Math.floor(Math.random() * inspirational.length)
+  let randomInspirational = inspirational[randomIndexThree]
+
+  res.status(200).send(randomInspirational)
 })
 
 const horoscopes = ['Cupid may have struck you unawares. You look and feel great.',
@@ -56,5 +76,9 @@ app.get('/api/horoscopes/:id', (req, res) => {
 
   res.status(200).send(quote)
 })
+
+app.post('/api/list', ctrl.createList)
+app.delete('/api/list', ctrl.deleteList)
+
 
 app.listen(4000, () => console.log("Server running on 4000"));
